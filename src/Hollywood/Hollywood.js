@@ -1,45 +1,26 @@
 import React, {useContext, useState} from 'react'
 import { ContextAPI } from '../Component/ContextAPI'
-import ShowBlog from '../Component/ShowBlog'
 import { Link } from 'react-router-dom'
 import './Hollywood.css'
     
 
 const Hollywood = () => {
 
-    const[id,setId] = useState({
-        id:"",
-    });
-
-    const handleId = (val) =>{
-        console.log(val);
-        setId({
-            [id]:val
-        });
-        console.log(id);
-        <ShowBlog pass={[id]} />
-    }
-
-    let loadmorebtn = "Load More";
-    let loadmorecount;
-    let viewmorecount;
-    console.log(loadmorecount,viewmorecount);
-    let viewmorebtn = "View More";
     const [loadMore, setLoadMore] = useState(false);
-    const [viewMore, setViewMore] = useState(false);
+    const [loadBtntext, setLoadBtntext] = useState("Load More");
 
 
     const handleLoadMore = () =>{
-        loadmorecount++;
-        console.log(loadmorecount);
         setLoadMore(!loadMore);
-        if(loadmorecount%2 == 1){
-        loadmorebtn = "Load Less";
+        console.log(loadMore);
+        if(!loadMore){
+            setLoadBtntext("Load Less");
         }
-        else {
-            loadmorebtn = "Load More";
+        else{
+            setLoadBtntext("Load More");
         }
-        console.log(loadMore,loadmorebtn);
+        // console.log(loadmorebtn);
+
     }
 
     const [rows] = useContext(ContextAPI);
@@ -61,8 +42,8 @@ const Hollywood = () => {
                         />
                         <div className="newsText">
                             <div>
-                            <Link to='/showblog'><button className="hideBtn" onClick={()=>handleId(item.id)}><span className="hollywoodTextTitle">{item.title}</span></button></Link>
-                                <br />
+                                <Link to={`/showblog/${item.id}`}><span className="hollywoodTextTitle">{item.title}</span></Link>
+                                    <br />
                                 <div className="hollywoodDescription">{item.description}</div>
                             </div>
                             <div className="lowerNewsText">
@@ -78,7 +59,7 @@ const Hollywood = () => {
                             />
                             <div className="newsText">
                                 <div>
-                                    <Link to='/showblog'><button className="hideBtn" onClick={()=>handleId(item.id)}><span className="hollywoodTextTitle">{item.title}</span></button></Link>
+                                    <Link to={`/showblog/${item.id}`}><span className="hollywoodTextTitle">{item.title}</span></Link>
                                     <br />
                                     <div className="hollywoodDescription">{item.description}</div>
                                 </div>
@@ -90,7 +71,7 @@ const Hollywood = () => {
                         </div> ):(""))
                     ))}
                     <div>
-                        <button className="loadMoreHollywood" onClick={()=>setLoadMore(handleLoadMore)}>{loadmorebtn}</button>  
+                        <button className="loadMoreHollywood" onClick={()=>setLoadMore(handleLoadMore)}>{loadBtntext}</button>  
                     </div>
                 </div>
                 <div className="columns2">
@@ -101,7 +82,7 @@ const Hollywood = () => {
                                 (item.id) == 111 ? (
                                     <div className="topHollywoodPostsContent1">
                                         <img src={item.image} className="topHollywoodPostsImage1"/>
-                                        <Link to='/showblog'><button className="hideBtn" onClick={()=>handleId(item.id)}><span className="topHollywoodPostsTextTitle">{item.title}</span></button></Link>                     
+                                        <Link to={`/showblog/${item.id}`}><span className="topHollywoodPostsTextTitle">{item.title}</span></Link>                     
                                         <div className="lowerNewsText">
                                             <span className='category'>{item.category}</span>
                                             <span className='date'> {item.date}</span>
@@ -114,7 +95,7 @@ const Hollywood = () => {
                                     <div className="topHollywoodPostsContent2">
                                         <img src={item.image} className="topHollywoodPostsImage2"/>
                                             <div className="alignColumn">
-                                                <Link to='/showblog'><button className="hideBtn" onClick={()=>handleId(item.id)}><span className="topHollywoodPostsTextTitle2">{item.title}</span></button></Link>                     
+                                                <Link to={`/showblog/${item.id}`}><span className="topHollywoodPostsTextTitle2">{item.title}</span></Link>                     
                                                 <div className="lowerNewsText2">
                                                     <span className='category'>{item.category}</span>
                                                     <span className='date'> {item.date}</span>

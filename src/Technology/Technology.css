@@ -48,8 +48,13 @@
     text-align: left;
     font-weight: 500;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
 }
 
+.technologyTextTitle:hover{
+    color:rgb(235, 84, 117);
+}
 .columns{
     display : flex;
     flex-direction: row;
@@ -142,7 +147,13 @@
     text-align: left;
     font-weight: 600;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
 }
+
+.topTechnologyPostsTextTitle:hover{
+    color:rgb(235, 84, 117);
+}    
 
 .topTechnologyPostsTextTitle2{
     margin-top: 0.75rem;
@@ -152,7 +163,13 @@
     text-align: left;
     font-weight: 600;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
 }
+
+.topTechnologyPostsTextTitle2:hover{
+    color:rgb(235, 84, 117);
+} 
 
 .loadMoreTechnology{
     width: 5.5rem;
@@ -165,4 +182,5 @@
     background-color: rgb(235, 84, 117);
     color: whitesmoke;
     border-radius: 4px;
+    cursor: pointer;
 }

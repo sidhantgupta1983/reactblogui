@@ -126,6 +126,25 @@
     border-bottom: 3px solid #F08080;
 }
 
+.latestStoriesTextTitle{
+  display: flex;
+    font-weight: 500;
+    text-align: left;
+    width: 450px;
+    line-height: 32px;
+    font-size: 32px;
+    text-align: left;
+    color: black;
+    text-decoration: underline white;
+}
+
+.latestStoriesTextTitle:hover{
+  color:slateblue;
+}
+
+.latestArticleTextTitle:hover{
+  color:slateblue;
+}
 .postContent{
     display : flex;
     flex-direction: row;
@@ -174,6 +193,7 @@
     height: 229px;
     margin-bottom: 1rem;
   }
+
   .title {
     display: flex;
     flex-direction: left;
@@ -182,7 +202,13 @@
     line-height: 30px;
     text-align:left;
     font-family: Montserrat;
+    font-weight: 500;
     color: #000000;
+    text-decoration: underline white;
+  }
+
+  .title:hover{
+    color:slateblue;
   }
   
   .description {
@@ -232,11 +258,14 @@
 
   .latestArticleTextTitle{
     display: flex;
+    font-weight: 500;
     text-align: left;
     width: 450px;
     line-height: 32px;
     font-size: 32px;
     text-align: left;
+    color: black;
+    text-decoration: underline white;
   }
   
   .latestArticleDescription{
@@ -295,6 +324,7 @@
     background-color: rgb(243, 96, 174);
     color: whitesmoke;
     border-radius: 4px;
+    cursor: pointer;
   }
 
   .verticalImage{
@@ -341,7 +371,7 @@
   .topPostsContent1{
     display: flex;
     flex-direction: column;
-    width : 50%;
+    width : 84%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     padding: 10px;
     margin-top: 1rem;
@@ -366,7 +396,7 @@
   .topPostsContent2{
     margin-top: 5px;
     margin-left: 1rem;
-    width : 53.5%;
+    width : 90.5%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     display: flex;
     border-radius: 2px;
@@ -377,6 +407,14 @@
     font-size: 21px;
     display: flex;
     text-align: left;
+  }
+
+  .topPostsTextTitle2:hover{
+    color: slateblue;
+  }
+
+  .topPostsTextTitle:hover{
+    color: slateblue;
   }
 
   .lowerNewsText2{
@@ -392,6 +430,20 @@
     padding: 5px;
   }
 
+  .loadMore{
+    width: 5.5rem;
+    height: 2rem;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+    background-color: crimson;
+    color: whitesmoke;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
   .viewMore{
     width: 5.5rem;
     height: 2rem;
@@ -400,9 +452,11 @@
     display: flex;
     margin-left: 4rem;
     margin-bottom: 4rem;
-    background-color: slateblue;
+    background-color: crimson;
     color: whitesmoke;
     border-radius: 4px;
+    cursor: pointer;
+
   }
 
   .fa-solid{

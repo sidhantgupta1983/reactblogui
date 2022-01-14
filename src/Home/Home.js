@@ -1,44 +1,38 @@
 import React, {useState,useContext} from 'react'
-// import mainValleypik from './mainvalleypik.jpg'
-// import sideValleypik from './sidevalleypik.jpg'
+import {Link} from 'react-router-dom'
 import { ContextAPI } from '../Component/ContextAPI'
 import './Home.css'
 
 const Home = () => {
-    let loadmorebtn = "Load More";
-    let loadmorecount;
-    let viewmorecount;
-    console.log(loadmorecount,viewmorecount);
-    let viewmorebtn = "View More";
     const [loadMore, setLoadMore] = useState(false);
-    const [viewMore, setViewMore] = useState(false);
+    const [loadBtntext, setLoadBtntext] = useState("Load More");
 
 
     const handleLoadMore = () =>{
-        loadmorecount++;
-        console.log(loadmorecount);
         setLoadMore(!loadMore);
-        if(loadmorecount%2 == 1){
-        loadmorebtn = "Load Less";
+        console.log(loadMore);
+        if(!loadMore){
+            setLoadBtntext("Load Less");
         }
-        else {
-            loadmorebtn = "Load More";
+        else{
+            setLoadBtntext("Load More");
         }
-        console.log(loadMore,loadmorebtn);
     }
+    const [viewMore, setViewMore] = useState(false);
+    const [viewBtntext, setViewBtntext] = useState("View More");
+
 
     const handleViewMore = () =>{
-        viewmorecount++;
-        console.log(viewmorecount);
         setViewMore(!viewMore);
-        if(viewmorecount%2 == 1){
-            viewmorebtn = "View Less";
-            }
-            else {
-                viewmorebtn = "view More";
-            }
-        console.log(viewMore,viewmorebtn);
+        console.log(viewMore);
+        if(!viewMore){
+            setViewBtntext("View Less");
+        }
+        else{
+            setViewBtntext("View More");
+        }
     }
+
 
     const [rows] = useContext(ContextAPI);
     
@@ -86,7 +80,7 @@ const Home = () => {
                             />
                             <div className="newsText">
                                 <div>
-                                    <span className="title">{item.title}</span>
+                                <Link to={`/showblog/${item.id}`}><span className="title">{item.title}</span></Link>
                                     <br />
                                     <div className="description">{item.description}</div>
                                 </div>
@@ -114,7 +108,7 @@ const Home = () => {
                                     />
                                     <div className="newsText">
                                         <div>
-                                            <span className="latestArticleTextTitle">{item.title}</span>
+                                        <Link to={`/showblog/${item.id}`}><span className="latestArticleTextTitle">{item.title}</span></Link>
                                             <br />
                                             <div className="latestArticleDescription">{item.description}</div>
                                         </div>
@@ -131,7 +125,7 @@ const Home = () => {
                                         />
                                         <div className="newsText">
                                             <div>
-                                                <span className="latestArticleTextTitle">{item.title}</span>
+                                            <Link to={`/showblog/${item.id}`}><span className="latestArticleTextTitle">{item.title}</span></Link>
                                                 <br />
                                                 <div className="latestArticleDescription">{item.description}</div>
                                             </div>
@@ -143,9 +137,9 @@ const Home = () => {
                                     </div> ):(""))
                                 ))}
                                 <div>
-                                <button className="loadMore" onClick={()=>setLoadMore(handleLoadMore)}>{loadmorebtn}</button>
+                                <button className="loadMore" onClick={()=>setLoadMore(handleLoadMore)}>{loadBtntext}</button>
                                 {rows.map((item)=>(
-                                    (item.id) == 5 ? (
+                                    (item.id) == 14 ? (
                                         <>
                                         <span className="imageText">Joshua Tree</span>
                                         <span className="imageLowerText">Travel / 27 August, 2017</span>
@@ -165,7 +159,7 @@ const Home = () => {
                                         (item.id) == 8 ? (
                                             <div className="topPostsContent1">
                                                 <img src={item.image} className="topPostsImage1"/>
-                                                <span className="topPostsTextTitle">{item.title}</span>
+                                                <Link to={`/showblog/${item.id}`}><span className="topPostsTextTitle">{item.title}</span></Link>
                                                 <div className="lowerNewsText">
                                                     <span className='category'>{item.category}</span>
                                                     <span className='date'> {item.date}</span>
@@ -174,11 +168,11 @@ const Home = () => {
                                         ) :("")         
                                     ))}
                                     {rows.map((item)=>(
-                                        (item.id) >7 && (item.id)< 11 ? (
+                                        (item.id) >8 && (item.id)< 12 ? (
                                             <div className="topPostsContent2">
                                                 <img src={item.image} className="topPostsImage2"/>
                                                 <div className="alignColumn">
-                                                    <span className="topPostsTextTitle2">{item.title}</span>
+                                                <Link to={`/showblog/${item.id}`}><span className="topPostsTextTitle2">{item.title}</span></Link>
                                                     <div className="lowerNewsText2">
                                                         <span className='category'>{item.category}</span>
                                                         <span className='date'> {item.date}</span>
@@ -197,11 +191,11 @@ const Home = () => {
                 <div className="latestStoriesTitle">Latest Stories</div>
                 <div className="latestStoriesContent">
                 {rows.map((item)=>(
-                    viewMore == false ? ((item.id)>7 && (item.id) < 11? (
+                    viewMore == false ? ((item.id) > 7 && (item.id) < 11? (
                         <div className="newsCard">
                             <div className="newsText">
                                 <div>
-                                    <span className="latestStoriesTextTitle">{item.title}</span>
+                                <Link to={`/showblog/${item.id}`}><span className="latestStoriesTextTitle">{item.title}</span></Link>
                                     <br />
                                     <div className="description">{item.description}</div>
                                 </div>
@@ -210,11 +204,11 @@ const Home = () => {
                                     <span className='date'> {item.date}</span>
                                 </div>
                             </div>
-                        </div> ) :("")) :((item.id)>7 && (item.id) < 14? (
+                        </div> ) :("")) :((item.id)>7 && (item.id) < 14 ? (
                         <div className="newsCard">
                             <div className="newsText">
                                 <div>
-                                    <span className="latestStoriesTextTitle">{item.title}</span>
+                                <Link to={`/showblog/${item.id}`}><span className="latestStoriesTextTitle">{item.title}</span></Link>
                                     <br />
                                     <div className="description">{item.description}</div>
                                 </div>
@@ -226,7 +220,7 @@ const Home = () => {
                         </div> ) :(""))                        
                 ))}
                 </div>
-                <button className="viewMore" onClick={()=>{handleViewMore()}}>{viewmorebtn}</button>
+                <button className="viewMore" onClick={()=>{handleViewMore()}}>{viewBtntext}</button>
             </div>
         </div>
     )

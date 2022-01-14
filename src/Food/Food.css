@@ -58,6 +58,12 @@
     text-align: left;
     font-weight: 500;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.foodTextTitle:hover{
+    color:rgb(236, 159, 58);
 }
 
 .columns{
@@ -121,6 +127,10 @@
 
 }
 
+.topPostsTextTitle:hover{
+    color:rgb(236, 159, 58);
+}
+
 .topPostsTextTitle2{
     margin-top: 0.75rem;
     font-size: 18px;
@@ -129,11 +139,8 @@
     text-align: left;
 }
 
-.hideBtn{
-    border: none;
-    background-color: white;
-    font-weight: bold;
-    text-align: left;
+.topPostsTextTitle2:hover{
+    color: rgb(236, 159, 58);
 }
 
 .topFoodPostsImage1{
@@ -159,6 +166,12 @@
     display: flex;
     text-align: left;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topFoodPostsTextTitle:hover{
+    color:rgb(236, 159, 58);
 }
 
 .topFoodPostsTextTitle2{
@@ -167,6 +180,12 @@
     font-weight: 600;
     display: flex;
     text-align: left;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topFoodPostsTextTitle2:hover{
+    color: rgb(236, 159, 58);
 }
 
 .loadMoreFood{
@@ -177,7 +196,7 @@
     display: flex;
     margin-left: 4rem;
     margin-bottom: 4rem;
-    background-color: rgb(212, 184, 106);
+    background-color: rgb(236, 159, 58);
     color: whitesmoke;
     border-radius: 4px;
 }

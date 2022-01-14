@@ -47,6 +47,12 @@
     text-align: left;
     font-weight: 500;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.hollywoodTextTitle:hover{
+    color:goldenrod;
 }
 
 .columns{
@@ -141,6 +147,12 @@
     display: flex;
     text-align: left;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topHollywoodPostsTextTitle:hover{
+    color:goldenrod;
 }
 
 .topHollywoodPostsTextTitle2{
@@ -150,7 +162,13 @@
     display: flex;
     text-align: left;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
 
+}
+
+.topHollywoodPostsTextTitle2:hover{
+    color:goldenrod;
 }
 
 .loadMoreHollywood{
@@ -164,4 +182,5 @@
     background-color: rgb(228, 167, 111);
     color: whitesmoke;
     border-radius: 4px;
+    cursor: pointer;
 }

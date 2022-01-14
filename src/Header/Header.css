@@ -5,6 +5,18 @@
     transform: matrix(0, -1, 1, 0, 0, 0);
 }
 
+.directHome{
+  color: black;
+  text-decoration: none;
+}
+
+
+.directHome:hover{
+  color:#D33472;
+  text-decoration: none;
+
+}
+
 .sirenHeading{
     width: 190px;
     height: 87px;
@@ -33,6 +45,26 @@
   list-style : none;
   margin-top: 10px;
   border-bottom: 3px solid #F0F0F0;
+}
+
+.hide{
+  display : none;
+}
+
+.styling{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-left: 10rem;
+  color:#D33472 ;
+}
+
+.styling:hover{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-left: 10rem;
+  color:slateblue ;
 }
 
 .topListItem{

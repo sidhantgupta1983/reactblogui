@@ -58,6 +58,12 @@
     text-align: left;
     font-weight: 500;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.fitnessTextTitle:hover{
+    color:seagreen;
 }
 
 .columns{
@@ -120,12 +126,20 @@
     font-weight: bold;
 }
 
+.topPostsTextTitle:hover{
+    color: seagreen;
+}
+
 .topPostsTextTitle2{
     margin-top: 0.75rem;
     font-size: 18px;
     display: flex;
     font-weight: bold;
     text-align: left;
+}
+
+.topPostsTextTitle2:hover{
+    color: seagreen;
 }
 
 .topFitnessPostsImage1{
@@ -152,6 +166,12 @@
     display: flex;
     text-align: left;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topFitnessPostsTextTitle:hover{
+    color: seagreen;
 }
 
 .topFitnessPostsTextTitle2{
@@ -161,7 +181,13 @@
     display: flex;
     text-align: left;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
 
+}
+
+.topFitnessPostsTextTitle2:hover{
+    color: seagreen;
 }
 
 .loadMoreFitness{
@@ -175,4 +201,5 @@
     background-color: rgb(126, 126, 144);
     color: whitesmoke;
     border-radius: 4px;
+    cursor: pointer;
 }

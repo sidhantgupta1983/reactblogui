@@ -25,9 +25,9 @@ function App() {
             <Route path='/bollywood' element={<Bollywood/>}/> 
             <Route path='/technology' element={<Technology/>} />
             <Route path='/hollywood' element={<Hollywood/>} />
-            <Route path='/fitness' element={<Fitness/>}/>
+            <Route path='/fitness/' element={<Fitness/>}/>
             <Route path='/food' element={<Food/>}/>
-            <Route path='/showblog' element={<ShowBlog />}/>
+            <Route path='/showblog/:id' element={<ShowBlog />}/>
             <Route path='/*' element={<PageNotFound/>}/>
           </Routes>
         </Router>

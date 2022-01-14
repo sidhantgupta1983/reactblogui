@@ -39,6 +39,17 @@
     text-align: left;
 }
 
+.bollywoodTitle{
+    width: 2.75rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    height: 3rem;
+    font-size : 2.5rem;
+    font-family: Montserrat;
+    text-align: left;
+    border-bottom: 3px solid #F08080;
+}
+
 .bollywoodTextTitle{
     display: flex;
     text-align: left;
@@ -48,7 +59,12 @@
     text-align: left;
     font-weight: 500;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
 
+.bollywoodTextTitle:hover{
+    color: slateblue;
 }
 
 .columns{
@@ -109,6 +125,12 @@
     display: flex;
     text-align: left;
     font-weight: bold;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topPostsTextTitle:hover{
+    color:slateblue;
 }
 
 .topPostsTextTitle2{
@@ -117,6 +139,12 @@
     display: flex;
     font-weight: bold;
     text-align: left;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topPostsTextTitle2:hover{
+    color:slateblue;
 }
 
 .topBollywoodPostsImage1{
@@ -143,6 +171,12 @@
     text-align: left;
     font-weight: 600;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topBollywoodPostsTextTitle:hover{
+    color: slateblue;
 }
 
 .topBollywoodPostsTextTitle2{
@@ -153,6 +187,12 @@
     text-align: left;
     font-weight: 600;
     cursor: pointer;
+    text-decoration:underline white;
+    color: black;
+}
+
+.topBollywoodPostsTextTitle2:hover{
+    color:slateblue;
 }
 
 .loadMoreBollywood{
@@ -166,4 +206,5 @@
     background-color: slateblue;
     color: whitesmoke;
     border-radius: 4px;
+    cursor: pointer;
 }
