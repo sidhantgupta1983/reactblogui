@@ -41,7 +41,7 @@ const Home = () => {
             <div className='row1'>
                 <div className='col col1'>
                     {rows.map((item)=>(
-                        (item.id) === 1000 ? (
+                        (item.id) === "1000" ? (
                             <>
                                 <h3 className="mainValleyTitle">Valley of Kashmir</h3>
                                 <h6 className="mainValleySubtitle">Travel / August 21, 2021</h6>
@@ -53,7 +53,7 @@ const Home = () => {
                 </div>
                 <div className='col col2'>
                     {rows.map((item)=>(
-                        (item.id === 1001) ? (
+                        (item.id === "1001") ? (
                             <>
                                 <h3 className="sideValleyTitle1">The Sound cloud </h3>
                                 <h6 className="sideValleySubtitle1">Travel / August 21, 2021</h6>
@@ -139,7 +139,7 @@ const Home = () => {
                                 <div>
                                 <button className="loadMore" onClick={()=>setLoadMore(handleLoadMore)}>{loadBtntext}</button>
                                 {rows.map((item)=>(
-                                    (item.id) === 14 ? (
+                                    (item.id) === "14" ? (
                                         <>
                                         <span className="imageText">Joshua Tree</span>
                                         <span className="imageLowerText">Travel / 27 August, 2017</span>
