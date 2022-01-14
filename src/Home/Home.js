@@ -41,7 +41,7 @@ const Home = () => {
             <div className='row1'>
                 <div className='col col1'>
                     {rows.map((item)=>(
-                        (item.id) == 1000 ? (
+                        (item.id) === 1000 ? (
                             <>
                                 <h3 className="mainValleyTitle">Valley of Kashmir</h3>
                                 <h6 className="mainValleySubtitle">Travel / August 21, 2021</h6>
@@ -53,7 +53,7 @@ const Home = () => {
                 </div>
                 <div className='col col2'>
                     {rows.map((item)=>(
-                        (item.id == 1001) ? (
+                        (item.id === 1001) ? (
                             <>
                                 <h3 className="sideValleyTitle1">The Sound cloud </h3>
                                 <h6 className="sideValleySubtitle1">Travel / August 21, 2021</h6>
@@ -100,7 +100,7 @@ const Home = () => {
                     <div className="column">
                         <div className="column1">
                             {rows.map((item)=>(
-                                loadMore == false ?( (item.id)>3 && (item.id)<8?(
+                                loadMore === false ?( (item.id)>3 && (item.id)<8?(
                                     <div className="latestArticleNewsCard">
                                     <img alt={item.title} 
                                         src={item.image ? item.image : "http://www.aaru.edu.jo/websites/aaru2/wp-content/plugins/learnpress/assets/images/no-image.png?Mobile=1&Source=%2F%5Flayouts%2Fmobile%2Fdispform%2Easpx%3FList%3D78b536db%252De7c7%252D45d9%252Da661%252Ddb2a2aa2fbaf%26View%3D6efc759a%252D0646%252D433c%252Dab6e%252D2f027ffe0799%26RootFolder%3D%252Fwebsites%252Faaru2%252Fwp%252Dcontent%252Fplugins%252Flearnpress%252Fassets%252Fimages%26ID%3D4786%26CurrentPage%3D1"}
@@ -139,11 +139,11 @@ const Home = () => {
                                 <div>
                                 <button className="loadMore" onClick={()=>setLoadMore(handleLoadMore)}>{loadBtntext}</button>
                                 {rows.map((item)=>(
-                                    (item.id) == 14 ? (
+                                    (item.id) === 14 ? (
                                         <>
                                         <span className="imageText">Joshua Tree</span>
                                         <span className="imageLowerText">Travel / 27 August, 2017</span>
-                                        <img src={item.image} className='verticalImage'></img></>
+                                        <img src={item.image} alt="" className='verticalImage'></img></>
                                     ):(" ")
                                 ))}
                             </div>
@@ -156,9 +156,9 @@ const Home = () => {
                                 <div className="topPostsTitle">Top Posts</div>
                                     <div className="topPostsContent">
                                     {rows.map((item)=>(
-                                        (item.id) == 8 ? (
+                                        (item.id) === 8 ? (
                                             <div className="topPostsContent1">
-                                                <img src={item.image} className="topPostsImage1"/>
+                                                <img src={item.image} alt="" className="topPostsImage1"/>
                                                 <Link to={`/showblog/${item.id}`}><span className="topPostsTextTitle">{item.title}</span></Link>
                                                 <div className="lowerNewsText">
                                                     <span className='category'>{item.category}</span>
@@ -170,7 +170,7 @@ const Home = () => {
                                     {rows.map((item)=>(
                                         (item.id) >8 && (item.id)< 12 ? (
                                             <div className="topPostsContent2">
-                                                <img src={item.image} className="topPostsImage2"/>
+                                                <img src={item.image} alt="" className="topPostsImage2"/>
                                                 <div className="alignColumn">
                                                 <Link to={`/showblog/${item.id}`}><span className="topPostsTextTitle2">{item.title}</span></Link>
                                                     <div className="lowerNewsText2">
@@ -191,7 +191,7 @@ const Home = () => {
                 <div className="latestStoriesTitle">Latest Stories</div>
                 <div className="latestStoriesContent">
                 {rows.map((item)=>(
-                    viewMore == false ? ((item.id) > 7 && (item.id) < 11? (
+                    viewMore === false ? ((item.id) > 7 && (item.id) < 11? (
                         <div className="newsCard">
                             <div className="newsText">
                                 <div>

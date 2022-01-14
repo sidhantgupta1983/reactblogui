@@ -23,20 +23,20 @@ const ShowBlog = () => {
             <div className="mainColumn">
                 <div className='mainColumn1'>
                     <div className="handDiv">
-                        <img src={hand} className="hand"/>
+                        <img src={hand} alt="" className="hand"/>
                         <span className="handCount">5.5k</span>
                     </div>
                     <div className="shareDiv">
-                        <img src={share} className="share"/>
+                        <img src={share} alt="" className="share"/>
                         <span className="shareCount">Share this Article</span>
                     </div>                
                 </div>
                 <div className='mainColumn2' >
                     {rows.map((item)=>(
-                        item.id == id ? (<div>
+                        item.id === id ? (<div>
                             <div className="itemTitle">{item.title}</div>
                             <div className="pikIcons">
-                                <img src={face} className="face"/>
+                                <img src={face} alt="" className="face"/>
                                 <div className="nameDate">                                
                                     <span className="name">SIDHANT GUPTA KAASHHYUP</span>
                                     <span className="date">{item.date} 10 mins read</span>
@@ -48,7 +48,7 @@ const ShowBlog = () => {
                                     <i class="fa-brands fa-youtube-square"></i>
                                 </div>
                             </div>
-                            <img src={item.image} className="arrangeImage" />
+                            <img src={item.image} alt="" className="arrangeImage" />
                             <div className="itemDescription">{item.description}</div>
                         </div>):("")
                         ))}
@@ -62,7 +62,7 @@ const ShowBlog = () => {
                     {rows.map((item)=>(
                         (item.id > 151) && (item.id < 155)  ? (
                                 <div className="extraReads">
-                                    <img src={item.image} className="extraReadImage"/>
+                                    <img src={item.image} alt="" className="extraReadImage"/>
                                     <Link to={`/showblog/${item.id}`}><span className="extraReadTitle">{item.title}</span></Link>
                                     <div className="extraReadLowerNewsText">
                                             <span className='date'> {item.date} <b className="space">10 mins read</b></span>

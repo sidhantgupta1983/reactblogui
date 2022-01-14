@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 export const ContextAPI = createContext();
 
 export const BlogData = (props) => {
-  const [rows, setRows] = useState([
+  const [rows] = useState([
     { 
         id: "1000", 
         image: "/images/mainvalleypik.jpg", 
