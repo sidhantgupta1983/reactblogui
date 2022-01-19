@@ -204,7 +204,6 @@ const Home = () => {
                         </div></Link> ) :(""))                        
                 ))}
                 </div>
-                {/* <button className="viewMore" onClick={()=>{handleViewMore()}}>{viewBtntext}</button> */}
             </div>
         </div>
     )
