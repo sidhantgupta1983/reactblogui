@@ -18,20 +18,7 @@ const Home = () => {
             setLoadBtntext("Load More");
         }
     }
-    const [viewMore, setViewMore] = useState(false);
-    const [viewBtntext, setViewBtntext] = useState("View More");
-
-
-    const handleViewMore = () =>{
-        setViewMore(!viewMore);
-        console.log(viewMore);
-        if(!viewMore){
-            setViewBtntext("View Less");
-        }
-        else{
-            setViewBtntext("View More");
-        }
-    }
+    
 
 
     const [rows] = useContext(ContextAPI);
