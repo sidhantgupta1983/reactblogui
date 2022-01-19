@@ -175,7 +175,7 @@ const Home = () => {
                 <div className="latestStoriesTitle">Latest Stories</div>
                 <div className="latestStoriesContent">
                 {rows.map((item)=>(
-                    viewMore === false ? ((item.id) > 7 && (item.id) < 11? (
+                    loadMore === false ? ((item.id) > 7 && (item.id) < 11? (
                         <Link to={`/showblog/${item.id}`}><div className="LatestStoriesNewsCard">
                             <div className="newsText">
                                 <div>
