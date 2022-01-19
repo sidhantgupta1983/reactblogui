@@ -61,13 +61,13 @@ const ShowBlog = () => {
                 <div className="arrangeRow">
                     {rows.map((item)=>(
                         (item.id > 151) && (item.id < 155)  ? (
-                                <div className="extraReads">
+                            <Link to={`/showblog/${item.id}`}><div className="extraReads">
                                     <img src={item.image} alt="" className="extraReadImage"/>
-                                    <Link to={`/showblog/${item.id}`}><span className="extraReadTitle">{item.title}</span></Link>
+                                    <span className="extraReadTitle">{item.title}</span>
                                     <div className="extraReadLowerNewsText">
                                             <span className='date'> {item.date} <b className="space">10 mins read</b></span>
                                     </div>
-                                </div>
+                                </div></Link>
                         ):("")
                     ))}
                 </div>

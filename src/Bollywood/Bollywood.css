@@ -37,6 +37,12 @@
     color: #908D8D;
     font-family: Open Sans;
     text-align: left;
+    text-decoration: underline white;
+}
+
+.lowerNewsText2{
+    text-decoration:underline white;
+    color:black;
 }
 
 .bollywoodTitle{

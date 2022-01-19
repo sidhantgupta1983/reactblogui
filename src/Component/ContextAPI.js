@@ -31,7 +31,7 @@ export const BlogData = (props) => {
         id: "2", 
         image: "/images/home1.webp", 
         title: "CashOverflow.in, Pardeep Goyal", 
-        description: "If you’re seeking financial freedom and looking for the best Indian blogs to read that teach you about finance, online marketing and carefully crafted articles, CashOverflow is a must read blog for you which is run by Pardeep Goyal. If you want to know more about Pardeep from CashOverflow, we highly recommend you to check out our interview with Pardeep Goyal from here where you can learn a lot of useful things related to making money online.", 
+        description: "If you’re seeking financial freedom and looking for the best Indian blogs to read that teach you about finance, online marketing and carefully crafted articles, CashOverflow is a must read blog for you which is run by Pardeep Goyal. ", 
         category: "Finance", 
         date: "/ August 21 2017"
     },
@@ -39,7 +39,7 @@ export const BlogData = (props) => {
         id: "3", 
         image: "/images/home2.webp", 
         title: "Trak.in, Prabhudesai", 
-        description: "Trak.in is a pure Indian blog which covers all the stuff strictly related to India. Trak was started back in 2007 by an American return Arun Prabhudesai. In an interview Arun said, India has more capability to do more than other countries but lacks proper guidance and awareness. This was the main aim behind Trak. Arun now resides in Pune, Maharashtra.", 
+        description: "Trak.in is a pure Indian blog which covers all the stuff strictly related to India. Trak was started back in 2007 by an American return Arun Prabhudesai. In an interview Arun said, India has more capability to do more than other countries but lacks proper guidance and awareness. ", 
         category: "Technology", 
         date: "/ August 21 2017"
     },

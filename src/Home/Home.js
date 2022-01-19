@@ -64,23 +64,21 @@ const Home = () => {
                             </>
                         ) : ("")
                     ))}
-                    
                 </div>
             </div>
             <div className="latestPost">
                 <div className="latestPostTitle">The Latest</div>
                 <div className="latestPostContent">
-                    <div className="postContent">
                        {rows.map((item)=>(
                            (item.id)<4 ? (
-                            <div className="newsCard">
+                            <Link to={`/showblog/${item.id}`}><div className="newsCard">
                             <img alt={item.title} 
                                 src={item.image ? item.image : "http://www.aaru.edu.jo/websites/aaru2/wp-content/plugins/learnpress/assets/images/no-image.png?Mobile=1&Source=%2F%5Flayouts%2Fmobile%2Fdispform%2Easpx%3FList%3D78b536db%252De7c7%252D45d9%252Da661%252Ddb2a2aa2fbaf%26View%3D6efc759a%252D0646%252D433c%252Dab6e%252D2f027ffe0799%26RootFolder%3D%252Fwebsites%252Faaru2%252Fwp%252Dcontent%252Fplugins%252Flearnpress%252Fassets%252Fimages%26ID%3D4786%26CurrentPage%3D1"}
                                 className="newsImage"
                             />
                             <div className="newsText">
                                 <div>
-                                <Link to={`/showblog/${item.id}`}><span className="title">{item.title}</span></Link>
+                                <span className="title">{item.title}</span>
                                     <br />
                                     <div className="description">{item.description}</div>
                                 </div>
@@ -89,9 +87,8 @@ const Home = () => {
                                     <span className='date'> {item.date}</span>
                                 </div>
                             </div>
-                        </div> ) :("")                          
+                        </div></Link> ) :("")                          
                          ))}
-                    </div>
                 </div>
             </div>
             <div className="latestArticle">
@@ -101,14 +98,14 @@ const Home = () => {
                         <div className="column1">
                             {rows.map((item)=>(
                                 loadMore === false ?( (item.id)>3 && (item.id)<8?(
-                                    <div className="latestArticleNewsCard">
+                                    <Link to={`/showblog/${item.id}`}> <div className="latestArticleNewsCard">
                                     <img alt={item.title} 
                                         src={item.image ? item.image : "http://www.aaru.edu.jo/websites/aaru2/wp-content/plugins/learnpress/assets/images/no-image.png?Mobile=1&Source=%2F%5Flayouts%2Fmobile%2Fdispform%2Easpx%3FList%3D78b536db%252De7c7%252D45d9%252Da661%252Ddb2a2aa2fbaf%26View%3D6efc759a%252D0646%252D433c%252Dab6e%252D2f027ffe0799%26RootFolder%3D%252Fwebsites%252Faaru2%252Fwp%252Dcontent%252Fplugins%252Flearnpress%252Fassets%252Fimages%26ID%3D4786%26CurrentPage%3D1"}
                                         className="latestArticelNewsImage"
                                     />
                                     <div className="newsText">
                                         <div>
-                                        <Link to={`/showblog/${item.id}`}><span className="latestArticleTextTitle">{item.title}</span></Link>
+                                        <span className="latestArticleTextTitle">{item.title}</span>
                                             <br />
                                             <div className="latestArticleDescription">{item.description}</div>
                                         </div>
@@ -117,15 +114,15 @@ const Home = () => {
                                             <span className='date'> {item.date}</span>
                                         </div>
                                     </div>
-                                    </div> ):("")) :((item.id)>3 && (item.id)<10?(
-                                        <div className="latestArticleNewsCard">
+                                    </div> </Link>):("")) :((item.id)>3 && (item.id)<10?(
+                                        <Link to={`/showblog/${item.id}`}><div className="latestArticleNewsCard">
                                         <img alt={item.title} 
                                             src={item.image ? item.image : "http://www.aaru.edu.jo/websites/aaru2/wp-content/plugins/learnpress/assets/images/no-image.png?Mobile=1&Source=%2F%5Flayouts%2Fmobile%2Fdispform%2Easpx%3FList%3D78b536db%252De7c7%252D45d9%252Da661%252Ddb2a2aa2fbaf%26View%3D6efc759a%252D0646%252D433c%252Dab6e%252D2f027ffe0799%26RootFolder%3D%252Fwebsites%252Faaru2%252Fwp%252Dcontent%252Fplugins%252Flearnpress%252Fassets%252Fimages%26ID%3D4786%26CurrentPage%3D1"}
                                             className="latestArticelNewsImage"
                                         />
                                         <div className="newsText">
                                             <div>
-                                            <Link to={`/showblog/${item.id}`}><span className="latestArticleTextTitle">{item.title}</span></Link>
+                                            <span className="latestArticleTextTitle">{item.title}</span>
                                                 <br />
                                                 <div className="latestArticleDescription">{item.description}</div>
                                             </div>
@@ -134,7 +131,7 @@ const Home = () => {
                                                 <span className='date'> {item.date}</span>
                                             </div>
                                         </div>
-                                    </div> ):(""))
+                                    </div></Link> ):(""))
                                 ))}
                                 <div>
                                 <button className="loadMore" onClick={()=>setLoadMore(handleLoadMore)}>{loadBtntext}</button>
@@ -157,28 +154,28 @@ const Home = () => {
                                     <div className="topPostsContent">
                                     {rows.map((item)=>(
                                         (item.id) === 8 ? (
-                                            <div className="topPostsContent1">
+                                            <Link to={`/showblog/${item.id}`}><div className="topPostsContent1">
                                                 <img src={item.image} alt="" className="topPostsImage1"/>
-                                                <Link to={`/showblog/${item.id}`}><span className="topPostsTextTitle">{item.title}</span></Link>
+                                                <span className="topPostsTextTitle">{item.title}</span>
                                                 <div className="lowerNewsText">
                                                     <span className='category'>{item.category}</span>
                                                     <span className='date'> {item.date}</span>
                                                 </div>
-                                            </div>
+                                            </div></Link>
                                         ) :("")         
                                     ))}
                                     {rows.map((item)=>(
                                         (item.id) >8 && (item.id)< 12 ? (
-                                            <div className="topPostsContent2">
+                                            <Link to={`/showblog/${item.id}`}><div className="topPostsContent2">
                                                 <img src={item.image} alt="" className="topPostsImage2"/>
                                                 <div className="alignColumn">
-                                                <Link to={`/showblog/${item.id}`}><span className="topPostsTextTitle2">{item.title}</span></Link>
+                                                <span className="topPostsTextTitle2">{item.title}</span>
                                                     <div className="lowerNewsText2">
                                                         <span className='category'>{item.category}</span>
                                                         <span className='date'> {item.date}</span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div></Link>
                                         ) :("")
                                     ))}
                                 </div>
@@ -192,10 +189,10 @@ const Home = () => {
                 <div className="latestStoriesContent">
                 {rows.map((item)=>(
                     viewMore === false ? ((item.id) > 7 && (item.id) < 11? (
-                        <div className="newsCard">
+                        <Link to={`/showblog/${item.id}`}><div className="LatestStoriesNewsCard">
                             <div className="newsText">
                                 <div>
-                                <Link to={`/showblog/${item.id}`}><span className="latestStoriesTextTitle">{item.title}</span></Link>
+                                <span className="latestStoriesTextTitle">{item.title}</span>
                                     <br />
                                     <div className="description">{item.description}</div>
                                 </div>
@@ -204,11 +201,11 @@ const Home = () => {
                                     <span className='date'> {item.date}</span>
                                 </div>
                             </div>
-                        </div> ) :("")) :((item.id)>7 && (item.id) < 14 ? (
-                        <div className="newsCard">
+                        </div> </Link>) :("")) :((item.id)>7 && (item.id) < 14 ? (
+                        <Link to={`/showblog/${item.id}`}><div className="LatestStoriesNewsCard">
                             <div className="newsText">
                                 <div>
-                                <Link to={`/showblog/${item.id}`}><span className="latestStoriesTextTitle">{item.title}</span></Link>
+                                <span className="latestStoriesTextTitle">{item.title}</span>
                                     <br />
                                     <div className="description">{item.description}</div>
                                 </div>
@@ -217,10 +214,10 @@ const Home = () => {
                                     <span className='date'> {item.date}</span>
                                 </div>
                             </div>
-                        </div> ) :(""))                        
+                        </div></Link> ) :(""))                        
                 ))}
                 </div>
-                <button className="viewMore" onClick={()=>{handleViewMore()}}>{viewBtntext}</button>
+                {/* <button className="viewMore" onClick={()=>{handleViewMore()}}>{viewBtntext}</button> */}
             </div>
         </div>
     )
