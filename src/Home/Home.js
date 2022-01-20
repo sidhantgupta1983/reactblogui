@@ -29,11 +29,11 @@ const Home = () => {
                 <div className='col col1'>
                     {rows.map((item)=>(
                         (item.id) === "1000" ? (
-                            <>
+                            <Link to={`/showblog/${item.id}`}><>
                                 <h3 className="mainValleyTitle">Valley of Kashmir</h3>
                                 <h6 className="mainValleySubtitle">Travel / August 21, 2021</h6>
                                 <img src={item.image} alt='Main Valley Pik' className='mainValleyPik'/>
-                            </>) : ("")
+                            </></Link>) : ("")
 
                     ))}
                     
@@ -41,14 +41,14 @@ const Home = () => {
                 <div className='col col2'>
                     {rows.map((item)=>(
                         (item.id === "1001") ? (
-                            <>
+                            <Link to={`/showblog/${item.id}`}><>
                                 <h3 className="sideValleyTitle1">The Sound cloud </h3>
                                 <h6 className="sideValleySubtitle1">Travel / August 21, 2021</h6>
                                 <img src={item.image} alt='Main Valley Pik' className='sideValleyPik'/>
                                 <h3 className="sideValleyTitle2">You loved is doomed</h3>
                                 <h6 className="sideValleySubtitle2">Travel / August 21, 2021</h6>
                                 <img src={item.image} alt='Main Valley Pik' className='sideValleyPik'/>
-                            </>
+                            </></Link>
                         ) : ("")
                     ))}
                 </div>
@@ -124,10 +124,10 @@ const Home = () => {
                                 <button className="loadMore" onClick={()=>setLoadMore(handleLoadMore)}>{loadBtntext}</button>
                                 {rows.map((item)=>(
                                     (item.id) === "14" ? (
-                                        <>
+                                        <Link to={`/showblog/${item.id}`}><>
                                         <span className="imageText">Joshua Tree</span>
                                         <span className="imageLowerText">Travel / 27 August, 2017</span>
-                                        <img src={item.image} alt="" className='verticalImage'></img></>
+                                        <img src={item.image} alt="" className='verticalImage'></img></></Link>
                                     ):(" ")
                                 ))}
                             </div>
